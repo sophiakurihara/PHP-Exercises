@@ -25,5 +25,9 @@ if (0 < $y || $z < 10) {
 // If 0 is less than $x AND $x is less than 10
 // then echo the result as a sentence "0 is less than {$x} AND {$x} is less than 10".
 
+if (0 < $x && $x < 10) {
+	echo "0 is less than {$x} AND {$x} is less than 10"
+}
+
 // TODO:
 // repeat the if statement for $y and $z.
