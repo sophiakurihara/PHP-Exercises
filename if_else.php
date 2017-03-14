@@ -29,3 +29,4 @@ if ($b === $c) {
 } else {
     echo "$b is not equal to $c\n";
 }
+
