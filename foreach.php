@@ -18,8 +18,12 @@ $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, 
 // 	}
 // }
 
-foreach($things as $stuff) {
-	if (is_scalar($stuff)) {
-		echo "$stuff\n";
-	}
+// foreach($things as $stuff) {
+// 	if (is_scalar($stuff)) {
+// 		echo "$stuff\n";
+// 	}
+// }
+
+foreach ($things as $stuff) {
+	echo "$stuff\n";
 }
