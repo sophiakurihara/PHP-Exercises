@@ -31,3 +31,6 @@ if (0 < $x && $x < 10) {
 
 // TODO:
 // repeat the if statement for $y and $z.
+if (0 < $y && $y < $z) {
+	"0 is less than {$y} OR {$y} is less than {$z}"
+}
