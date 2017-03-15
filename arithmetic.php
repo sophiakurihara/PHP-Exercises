@@ -17,7 +17,7 @@ function multiply($a, $b)
 
 function divide($a, $b)
 {
-    // Add code here
+    return $a / $b;
 }
 
 // Add code to test your functions here
