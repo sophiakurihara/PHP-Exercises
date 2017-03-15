@@ -12,7 +12,7 @@ function subtract($a, $b)
 
 function multiply($a, $b)
 {
-    // Add code here
+    return $a * $b;
 }
 
 function divide($a, $b)
