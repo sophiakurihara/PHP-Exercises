@@ -1,5 +1,8 @@
 <?php
 
+$a = 25;
+$b = 5;
+
 function add($a, $b)
 {
     return $a + $b;
@@ -26,8 +29,6 @@ function modulus($a, $b)
 }
 
 // Add code to test your functions here
-$a = 25;
-$b = 5;
 
 echo add($a, $b) . PHP_EOL;
 echo subtract($b, $a) . PHP_EOL;
