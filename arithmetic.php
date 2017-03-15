@@ -24,4 +24,7 @@ function divide($a, $b)
 $a = 25;
 $b = 5;
 
-function($a, $b);
+echo add($a, $b) . PHP_EOL;
+echo subtract($b, $a) . PHP_EOL;
+echo multiply($a, $b) . PHP_EOL;
+echo divide($a, $b) . PHP_EOL;
