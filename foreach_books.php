@@ -24,6 +24,9 @@ $books = array(
 );
 
 foreach ($books as $book => $value) {
-	echo "{$book}\n";
+	echo "$book\n";
+	foreach ($value as $list => $name) {
+		echo "{$list} : {$name}\n";
+	}
 
 }
