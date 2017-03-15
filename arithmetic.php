@@ -21,3 +21,7 @@ function divide($a, $b)
 }
 
 // Add code to test your functions here
+$a = 25;
+$b = 5;
+
+function($a, $b);
