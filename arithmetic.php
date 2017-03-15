@@ -7,7 +7,7 @@ function add($a, $b)
 
 function subtract($a, $b)
 {
-    // Add code here
+    return $a - $b;
 }
 
 function multiply($a, $b)
