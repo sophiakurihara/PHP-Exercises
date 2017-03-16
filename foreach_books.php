@@ -27,7 +27,7 @@ foreach ($books as $book => $title) {
 	if ($title["published"] > 1950) {
 		echo ("$book\n");
 		foreach ($title as $list => $info) {
-			echo "{$list} : {$info}\n";
+			echo "\t{$list} : {$info}\n";
 		}
 		echo ("\n");
 	}
