@@ -55,31 +55,26 @@ $states = [
 			    'WY' => 'Wyoming'
 			  ];
 
+echo "These states contain the letter 'x' in their names:\n";
 foreach ($states as $key => $value) {
 	if (strpos($value, 'x') !== false) {
-		echo "This state contains the letter 'x' in its name:";
 		echo "\t$value\n";	
 	}
 }
 
+echo "These states do NOT contain the letter 'a' in their names:\n";
 foreach ($states as $key => $value) {
 	if (strpos($value, 'a') == false) {
-		echo "This state does NOT contain the letter 'a' in its name:";
 		echo "\t$value\n";
 	}
 }
 
+$vowels = ['a','e','i','o','u','A','E','I','O','U'];
+
+echo "States and their abbreviations, starting with vowels:\n";
 foreach ($states as $key => $value) {
-	if ($key[0] == 'A') {
-		echo "$key : $value\n";
-	} elseif ($key[0] == 'E') {
-		echo "$key : $value\n";
-	} elseif ($key[0] == 'I') {
-		echo "$key : $value\n";
-	} elseif ($key[0] == 'O') {
-		echo "$key : $value\n";
-	} elseif ($key[0] == 'U') {
-		echo "$key : $value\n";
+	if (in_array($key[0], $vowels)) {
+		echo "\t$key : $value\n";
 	}
 
 }
@@ -88,26 +83,36 @@ foreach ($states as $key => $value) {
 	// call the array $statesStartingAndEndingWithVowels
 	// echo "These are states starting and ending with vowels"
 	// then echo each state name in this new array
+
+$startAndEnd = [];
+
 foreach ($states as $key => $value) {
-	$startAndEnd = array();
-	
-	if (substr($value, -1) == 'a' || substr($value, -1) == 'e' || substr($value, -1) == 'i' || substr($value, -1) == 'o' || substr($value, -1) == 'u') {
-		if ($value[0] == 'A') {
-			echo "$value\n";
-			$startAndEnd.= $value;
-		} elseif ($value[0] == 'E') {
-			echo "$value\n";
-		} elseif ($value[0] == 'I') {
-			echo "$value\n";
-		} elseif ($value[0] == 'O') {
-			echo "$value\n";
-		} elseif ($value[0] == 'U') {
-			echo "$value\n";
-		} 
+	if (in_array($value[0], $vowels, $strict = true) 
+		&& in_array(substr($value, -1), $vowels, $strict = true)) {
+		$startAndEnd[$key] = $value;
 	}
 }
+
+echo "These are states starting and ending with vowels:" . PHP_EOL;
+foreach ($startAndEnd as $startAndEnd) {
+	echo "\t$startAndEnd" . PHP_EOL;
+}
+
+// use a foreach to construct a new array containing states with names that are more than one word.
+	// call the array $statesWithMoreThanOneWordNames
+	// echo "These are the states with more than one word in their name"
+	// then echo each state name below
+
 
 // use a foreach to construct a new array of all the states with "North" "East" "South" or "West"
 	// call the array $arrayOfCardinalStates
 	// echo "These are states with north, south, east, or west in their name"
+$directions = ['N', 'E', 'S', 'W'];
+
+echo "These are the states with North, East, South, or West in their names:\n";
+foreach ($states as $key => $value) {
+	if (in_array($value[0], $directions)) {
+		echo "\t$key : $value\n";
+	}
+}
 
