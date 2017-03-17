@@ -117,11 +117,14 @@ foreach ($moreThanOne as $moreThanOne) {
 	// call the array $arrayOfCardinalStates
 	// echo "These are states with north, south, east, or west in their name"
 $arrayOfCardinalStates = [];
-
-echo "These are the states with North, East, South, or West in their names:\n";
-foreach ($states as $key => $value) {
-	if (in_array($value[0], $directions)) {
-		echo "\t$key : $value\n";
+$cardinals = ["North", "East", "South", "West"];
+foreach ($states as $key) {
+	if (strstr($key, "North") !== false || strstr($key, "East") !== false || strpos($key, "South") !== false || strpos($key, "West") !== false) {
+		$arrayOfCardinalStates[] = $key;
 	}
+}
+echo "These are states with north, east, south, or west in their name:" . PHP_EOL;
+foreach ($arrayOfCardinalStates as $cardinalState) {
+	echo "\t$cardinalState", PHP_EOL;
 }
 
