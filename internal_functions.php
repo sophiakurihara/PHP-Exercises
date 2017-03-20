@@ -2,8 +2,9 @@
 
 // TODO: Create your inspect() function here
 function inspect($input) {
+	$type = gettype($input);
+	}
 	
-}
 // Do not mofify these variables!
 $string1 = "I'm a little teapot";
 $string2 = '';
@@ -20,18 +21,25 @@ $null = NULL;
 // TODO: After each echo statement, use inspect() to output the variable's type and its value
 
 echo 'Inspecting $num1:' . PHP_EOL;
+inspect($num1);
 
 echo 'Inspecting $num2:' . PHP_EOL;
+inspect($num2);
 
 echo 'Inspecting $num3:' . PHP_EOL;
+inspect($num3);
 
 echo 'Inspecting $num4:' . PHP_EOL;
+inspect($num4);
 
 echo 'Inspecting $null:' . PHP_EOL;
+inspect($null);
 
 echo 'Inspecting $bool1' . PHP_EOL;
+inspect($bool1);
 
 echo 'Inspecting $bool2' . PHP_EOL;
+
 
 echo 'Inspecting $string1' . PHP_EOL;
 
