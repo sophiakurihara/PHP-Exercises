@@ -4,6 +4,9 @@ $names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
 
 $compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
 
+// the exercise asked for us to use at least 2 of the array manipulation methods
+// so this is how I solved it
+
 function combineArrays ($arrayOne, $arrayTwo) {
 	$arrayThree = [];
 	foreach ($arrayOne as $value) {
