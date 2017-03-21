@@ -2,8 +2,18 @@
 
 // TODO: Create your inspect() function here
 function inspect($input) {
-	$type = gettype($input);
+	$message = "";
+	if(is_array($input)) {
+		$message .= "\t\$input is an array and has " . count($input) . " elements:" . PHP_EOL;
+		foreach($input as $value) {
+			$message .= "\t $value" . PHP_EOL;
+		}
+	} else {
+		$message .= "\t\$input is of type " . gettype($input) . " with the value: " . $input . PHP_EOL;
 	}
+
+	echo $message;
+}
 	
 // Do not mofify these variables!
 $string1 = "I'm a little teapot";
@@ -35,16 +45,20 @@ inspect($num4);
 echo 'Inspecting $null:' . PHP_EOL;
 inspect($null);
 
-echo 'Inspecting $bool1' . PHP_EOL;
+echo 'Inspecting $bool1:' . PHP_EOL;
 inspect($bool1);
 
-echo 'Inspecting $bool2' . PHP_EOL;
+echo 'Inspecting $bool2:' . PHP_EOL;
+inspect($bool2);
 
+echo 'Inspecting $string1:' . PHP_EOL;
+inspect($string1);
 
-echo 'Inspecting $string1' . PHP_EOL;
+echo 'Inspecting $string2:' . PHP_EOL;
+inspect($string2);
 
-echo 'Inspecting $string2' . PHP_EOL;
+echo 'Inspecting $array1:' . PHP_EOL;
+inspect($array1);
 
-echo 'Inspecting $array1' . PHP_EOL;
-
-echo 'Inspecting $array2' . PHP_EOL;
+echo 'Inspecting $array2:' . PHP_EOL;
+inspect($array2);
