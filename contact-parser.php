@@ -1,5 +1,5 @@
 <?php
-$filename = 'contacts.txt';
+$textfile = 'contacts.txt';
 
 function parseContacts($filename) {
     $handle = fopen($filename, 'r');
@@ -12,13 +12,11 @@ function parseContacts($filename) {
     		// creates a substring containing only the phone number
     		$numbers = substr($string, -10, 10);
     		// using substr to access different parts of the phone number
-    		$areaCode = substr($numbers, 0, -7);
-    		$firstThree = substr($numbers, 3, -4);
-    		$lastFour = substr($numbers, 6);
+    		$phone = substr($numbers, 0, -7) . '-' . substr($numbers, 3, -4) . '-' . substr($numbers, 6);
     		// creates substring containing names . "|"
     		$names = substr($string, 0, -10);
     		// variable that appends names, and phone number with hypens
-    		$nameAndNumber = $names . $areaCode . "-" . $firstThree . "-" . $lastFour;	
+    		$nameAndNumber = $names . $phone;	
     		// turns strings into arrays, separated by "|" character
     		$contacts = explode("|", $nameAndNumber);
     		var_dump ($contacts);
@@ -28,4 +26,4 @@ function parseContacts($filename) {
     fclose($handle);
 }
 
-parseContacts($filename);
+parseContacts($textfile);
