@@ -7,6 +7,8 @@ function parseContacts($filename) {
     $contents = trim($contents);
     $contactsArray = explode("\n", $contents);
     // turns contents into an array of strings
+    // remembering to close the file!
+    fclose($handle);
     	
     	foreach($contactsArray as $string) {
     		// creates a substring containing only the phone number
@@ -22,8 +24,5 @@ function parseContacts($filename) {
     		var_dump ($contacts);
     	}
     // todo - read file and parse contacts
-    // remembering to close the file!
-    fclose($handle);
 }
-
 parseContacts($textfile);
