@@ -1,3 +1,36 @@
-Jack Blank|1231231234
-Jane Doe|2342342345
-Sam Space|3453453456
+Jack Blank | 1231231234
+Jane Doe | 2342342345
+Sam Space | 3453453456
+Sophie Sudiacal | 2107748500
+Kyle Kurihara | 2103022945
+Lina Carriedo | 2109971080
+Arnold Carriedo | 2102695967
+Franco Sudiacal | 2103069846
+Kayla Contreras | 2108705999
+Hannah Susman | 7128517007
+Mariana Lopez | 2107168089
+Beth Legg | 8324490122
+James Cason | 2544621354
+randomname | hereitis
+anothername | why is it doing this
+lastrandomname | plswork
+addinganame | isitgoingtowork
+hereyougo | again
+addingcontact | here
+removed | trim
+addnew | name
+isthisgoing | towork
+whatabout | this
+newname | here 
+something | here
+random | here
+anotherone | here
+another | one
+randomname | phonenumber
+addcontact | again
+onemore? | here
+name | contact
+newname | contact
+newname2 |134234212341234
+addingnew | contact!
+NEWCONTACT | YAYY
