@@ -12,6 +12,10 @@ class Rectangle {
 	public function area() {
 		return ($this->height * $this->width) . PHP_EOL;
 	}
+
+	public function perimeter() {
+		return (($this->width * 2) + ($this->height * 2)) . PHP_EOL;
+	}
 }
 
 // $rectangle1 = new Rectangle(10, 5);
