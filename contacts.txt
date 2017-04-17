@@ -34,3 +34,4 @@ newname | contact
 newname2 |134234212341234
 addingnew | contact!
 NEWCONTACT | YAYY
+beankurihara }

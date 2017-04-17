@@ -35,29 +35,30 @@ function displayContacts($filename) {
 	echo($contents . PHP_EOL);
 }
 
-function searchContacts($filename, $name) {
+function searchContacts($filename) {
+	fwrite(STDOUT, 'Please enter a name to search contacts: ' . PHP_EOL);
+	$name = trim(fgets(STDIN));
 	$handle = fopen($filename, 'r');
 	$contents = fread($handle, filesize($filename));
 	$contents = trim($contents);
-
 	$contentsArray = explode(PHP_EOL,$contents);
 
 	foreach($contentsArray as $key => $value) {
-		if(strpos($value, parse_str($name)) !== false) {
+		// fix case sensitivity
+		if(is_numeric(strpos($value, $name)) !== false) {
 			$contactFound = true;
+			echo $value;
 		} 
 	}
-
-	if($contactFound == true) {
-		
-		echo('Found it!' . PHP_EOL);
-	} else {
+	if($contactFound == false) {
 		echo('Contact not found' . PHP_EOL);
-	}
+	} 
 }
 
 
-function deleteContact($filename, $name) {
+function deleteContact($filename) {
+	fwrite(STDOUT, 'Please enter a contact to delete: ' . PHP_EOL);
+	$name = fgets(STDIN);
 	$handle = fopen($filename, 'r');
 	$contents = fread($handle, filesize($filename));
 	$contents = trim($contents);
@@ -102,7 +103,7 @@ function returnToMain() {
 
 function fiveOptions($option) {
 	$textfile = 'contacts.txt';
-
+// try to turn this into a switch case?
 	if ($option == 1) {
 		displayContacts($textfile);
 		returnToMain();
@@ -110,14 +111,10 @@ function fiveOptions($option) {
 		addNewContact($textfile);
 		returnToMain();
 	} elseif ($option == 3) {
-		fwrite(STDOUT, 'Please enter a name to search contacts: ' . PHP_EOL);
-		$name = fgets(STDIN);
-		searchContacts($textfile, $name);
+		searchContacts($textfile);
 		returnToMain();
 	} elseif ($option == 4) {
-		fwrite(STDOUT, 'Please enter a contact to delete: ' . PHP_EOL);
-		$name = fgets(STDIN);
-		deleteContact($textfile, $name);
+		deleteContact($textfile);
 		returnToMain();
 	} else {
 		clear;
